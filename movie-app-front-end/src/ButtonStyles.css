@@ -1,0 +1,26 @@
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 2rem;
+  }
+  
+  .fetchButton {
+    background-color: #4caf50;
+    color: #ffffff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s;
+  }
+  
+  .fetchButton:hover {
+    background-color: #45a049;
+  }
+  
+  .fetchButton:active {
+    background-color: #3e8e41;
+  }
+  
