@@ -1,16 +1,12 @@
-// routes/movies.js
 const express = require('express');
 const router = express.Router();
 const axios = require('axios');
 const sqlite3 = require('sqlite3').verbose();
 
-// Replace with your OMDB API key
 const OMDB_API_KEY = '55adf014';
 
-// Create a new SQLite database
 const db = new sqlite3.Database('./movies.db');
 
-// Create the 'movies' table if it doesn't exist
 db.serialize(() => {
   db.run(`
     CREATE TABLE IF NOT EXISTS movies (
@@ -40,11 +36,9 @@ router.get('/fetch-movies/:searchQuery', async (req, res) => {
     const response = await axios.get(url);
     const movies = response.data.Search || [];
 
-    // Start a transaction
     db.serialize(async () => {
       db.run('BEGIN TRANSACTION');
 
-      // Prepare the insert statements
       const insertStmtMovie = db.prepare(`
         INSERT OR IGNORE INTO movies (imdbID, Title, Year, PosterID, Type) VALUES (?, ?, ?, ?, ?)
       `);
