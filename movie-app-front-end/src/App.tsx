@@ -3,10 +3,12 @@ import FetchButton from './components/FetchButton';
 import MovieListDisplay from './components/MovieListDisplay';
 import MovieSort from './components/MovieSort';
 import { Box, TextField } from '@mui/material';
-import './App.css';
-import './ButtonStyles.css';
+import './styles/App.css';
+import './styles/ButtonStyles.css';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import './SearchBarStyles.css';
+import './styles/SearchBarStyles.css';
+import './styles/FetchButton.css';
+
 
 interface Movie {
   imdbID: string;

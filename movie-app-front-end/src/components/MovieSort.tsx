@@ -1,5 +1,5 @@
 import React from 'react';
-import './sortButtonStyles.css';
+import '../styles/SortButtonStyles.css';
 
 interface Movie {
   imdbID: string;

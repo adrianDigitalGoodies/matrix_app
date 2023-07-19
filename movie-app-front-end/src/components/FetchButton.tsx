@@ -1,5 +1,5 @@
 import React from 'react';
-import './FetchButtonStyles.css';
+import '../styles/ButtonStyles.css';
 
 interface FetchButtonProps {
   label: string;

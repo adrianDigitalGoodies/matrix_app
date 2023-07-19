@@ -30,11 +30,10 @@ const MovieListDisplay: React.FC<MovieListDisplayProps> = ({ movies }) => {
                 />
               )}
               <CardContent>
-                <Typography variant="h6">{movie.Title}</Typography>
+                <Typography variant="h6">{movie.Title} - {movie.Type.charAt(0).toUpperCase() + movie.Type.slice(1).toLowerCase()}</Typography>
                 <Typography variant="subtitle1" color="textSecondary">
                   {movie.Year}
                 </Typography>
-                <Typography variant="body2">{movie.Type}</Typography>
               </CardContent>
             </Card>
           </Grid>
